@@ -1,9 +1,9 @@
 ---
-name: apple-finder
+name: macos-finder
 description: Control Apple Finder on macOS via AppleScript. Use for file management, folder creation, opening files, revealing items, and automating Finder-based workflows. Triggers on queries about files, folders, Finder windows, or file operations on Mac.
 ---
 
-# Apple Finder Integration
+# macOS Finder Integration
 
 Control Finder and manage files/folders on macOS using AppleScript (`osascript`).
 

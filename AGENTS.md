@@ -1,6 +1,6 @@
 # Repo Guide
 
-This repo stores a skill for Apple Finder integration on macOS.
+This repo stores a skill for macOS Finder integration on macOS.
 
 ## Goal
 

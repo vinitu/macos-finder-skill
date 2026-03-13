@@ -1,19 +1,19 @@
-# Apple Finder Skill
+# macOS Finder Skill
 
-This repo stores a skill for Apple Finder integration on macOS via AppleScript (`osascript`).
+This repo stores a skill for macOS Finder integration on macOS via AppleScript (`osascript`).
 
 ## Installation
 
 Install with `skills.sh`:
 
 ```bash
-skills.sh add vinitu/apple-finder-skill
+skills.sh add vinitu/macos-finder-skill
 ```
 
 If you use the npm installer instead:
 
 ```bash
-npx skills add vinitu/apple-finder-skill
+npx skills add vinitu/macos-finder-skill
 ```
 
 ## Scope
