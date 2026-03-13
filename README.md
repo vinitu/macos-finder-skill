@@ -4,16 +4,14 @@ This repo stores a skill for macOS Finder integration on macOS via AppleScript (
 
 ## Installation
 
-Install with `skills.sh`:
+```bash
+npx skills add vinitu/macos-finder-skill
+```
+
+Or with [skills.sh](https://skills.sh):
 
 ```bash
 skills.sh add vinitu/macos-finder-skill
-```
-
-If you use the npm installer instead:
-
-```bash
-npx skills add vinitu/macos-finder-skill
 ```
 
 ## Scope
@@ -34,24 +32,22 @@ npx skills add vinitu/macos-finder-skill
 
 ## How To Use
 
+From the skill directory (or path where scripts are installed):
+
 ```bash
-# List files in a folder
-osascript -e 'tell application "Finder" to get name of every item of folder "Documents" of home'
-
-# Get file info
-osascript -e 'tell application "Finder" to get size of (POSIX file "/path/to/file" as alias)'
-
-# Create a folder
-osascript -e 'tell application "Finder" to make new folder at (POSIX file "/path/to/parent" as alias) with properties {name:"New Folder"}'
-
-# Move a file
-osascript -e 'tell application "Finder" to move (POSIX file "/path/to/file" as alias) to (POSIX file "/path/to/dest" as alias)'
-
-# Reveal a file in Finder
-osascript -e 'tell application "Finder" to reveal (POSIX file "/path/to/file" as alias)'
+# List items in folder (POSIX path)
+osascript scripts/item/list.applescript "/path/to/folder"
+# Get file info: name, size, kind, dates
+osascript scripts/item/info.applescript "/path/to/file"
+# Create folder at parent path
+osascript scripts/folder/create.applescript "/path/to/parent" "New Folder"
+# Move file or folder to destination folder
+osascript scripts/file/move.applescript "/path/to/file" "/path/to/dest"
+# Reveal file in Finder and bring to front
+osascript scripts/file/reveal.applescript "/path/to/file"
 ```
 
-For the full command set and examples, see `SKILL.md`.
+For the full command set and examples, see `SKILL.md` and scripts under `scripts/`.
 
 ## Troubleshooting
 
